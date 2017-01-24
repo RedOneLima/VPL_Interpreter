@@ -9,9 +9,66 @@ import java.util.*;
         static final int max = 10000;
         static int[] mem = new int[max];
         static int ip, bp, sp, rv, hp, numPassed, gp;
-
         static String fileName;
+/*##############################################################################################################*/
+        // use symbolic names for all opcodes:
+        // op to produce comment on a line by itself
+        private static final int noopCode = 0; // ops involved with registers
+        private static final int labelCode = 1;
+        private static final int callCode = 2;
+        private static final int passCode = 3;
+        private static final int allocCode = 4;
+        private static final int returnCode = 5;  // return a means "return and put
+                                                 // copy of value stored in cell a in register rv
+        private static final int getRetvalCode = 6;//op a means "copy rv into cell a"
+        private static final int jumpCode = 7;
+        private static final int condJumpCode = 8;
 
+        // arithmetic ops
+        private static final int addCode = 9;
+        private static final int subCode = 10;
+        private static final int multCode = 11;
+        private static final int divCode = 12;
+        private static final int remCode = 13;
+        private static final int equalCode = 14;
+        private static final int notEqualCode = 15;
+        private static final int lessCode = 16;
+        private static final int lessEqualCode = 17;
+        private static final int andCode = 18;
+        private static final int orCode = 19;
+        private static final int notCode = 20;
+        private static final int oppCode = 21;
+
+        // ops involving transfer of data
+        private static final int litCode = 22;  // litCode a b means "cell a gets b"
+        private static final int copyCode = 23;// copy a b means "cell a gets cell b"
+        private static final int getCode = 24; // op a b means "cell a gets
+        // contents of cell whose
+        // index is stored in b"
+        private static final int putCode = 25;  // op a b means "put contents
+        // of cell b in cell whose offset is stored in cell a"
+
+        // system-level ops:
+        private static final int haltCode = 26;
+        private static final int inputCode = 27;
+        private static final int outputCode = 28;
+        private static final int newlineCode = 29;
+        private static final int symbolCode = 30;
+        private static final int newCode = 31;
+
+        // global variable ops:
+        private static final int allocGlobalCode = 32;
+        private static final int toGlobalCode = 33;
+        private static final int fromGlobalCode = 34;
+
+        // debug ops:
+        private static final int debugCode = 35;
+
+        // return the number of arguments after the opcode,
+        // except ops that have a label return number of arguments
+        // after the label, which always comes immediately after
+        // the opcode
+/*##################################################################################################################*/
         public static void main(String[] args) throws Exception
         {
             BufferedReader keys = new BufferedReader(
@@ -103,69 +160,124 @@ import java.util.*;
             showMem( 0, codeEnd );
 
             gp = codeEnd + 1;
-
+            run();
         }// main
 
-        // use symbolic names for all opcodes:
+        private static void run(){
+            switch(oppCode){
+                case noopCode:
+                    //TODO
+                    break;
+                case labelCode:
+                    //TODO
+                    break;
+                case callCode:
+                    //TODO
+                    break;
+                case passCode:
+                    //TODO
+                    break;
+                case allocCode:
+                    //TODO
+                    break;
+                case returnCode:
+                    //TODO
+                    break;
+                case getRetvalCode:
+                    //TODO
+                    break;
+                case jumpCode:
+                    //TODO
+                    break;
+                case condJumpCode:
+                    //TODO
+                    break;
+                case addCode:
+                    //TODO
+                    break;
+                case subCode:
+                    //TODO
+                    break;
+                case multCode:
+                    //TODO
+                    break;
+                case divCode:
+                    //TODO
+                    break;
+                case remCode:
+                    //TODO
+                    break;
+                case equalCode:
+                    //TODO
+                    break;
+                case notEqualCode:
+                    //TODO
+                    break;
+                case lessCode:
+                    //TODO
+                    break;
+                case lessEqualCode:
+                    //TODO
+                    break;
+                case andCode:
+                    //TODO
+                    break;
+                case orCode:
+                    //TODO
+                    break;
+                case notCode:
+                    //TODO
+                    break;
+                case oppCode:
+                    //TODO
+                    break;
+                case litCode:
+                    //TODO
+                    break;
+                case copyCode:
+                    //TODO
+                    break;
+                case getCode:
+                    //TODO
+                    break;
+                case putCode:
+                    //TODO
+                    break;
+                case haltCode:
+                    //TODO
+                    break;
+                case inputCode:
+                    //TODO
+                    break;
+                case outputCode:
+                    //TODO
+                    break;
+                case newlineCode:
+                    //TODO
+                    break;
+                case symbolCode:
+                    //TODO
+                    break;
+                case newCode:
+                    //TODO
+                    break;
+                case allocGlobalCode:
+                    //TODO
+                    break;
+                case toGlobalCode:
+                    //TODO
+                    break;
+                case fromGlobalCode:
+                    //TODO
+                    break;
+                case debugCode:
+                    //TODO
+                    break;
+                default:
+                    System.out.println("Something went wrong!");
+            }
+        }//run
 
-        // op to produce comment on a line by itself
-        private static final int noopCode = 0;
-
-        // ops involved with registers
-        private static final int labelCode = 1;
-        private static final int callCode = 2;
-        private static final int passCode = 3;
-        private static final int allocCode = 4;
-        private static final int returnCode = 5;  // return a means "return and put
-        // copy of value stored in cell a in register rv
-        private static final int getRetvalCode = 6;//op a means "copy rv into cell a"
-        private static final int jumpCode = 7;
-        private static final int condJumpCode = 8;
-
-        // arithmetic ops
-        private static final int addCode = 9;
-        private static final int subCode = 10;
-        private static final int multCode = 11;
-        private static final int divCode = 12;
-        private static final int remCode = 13;
-        private static final int equalCode = 14;
-        private static final int notEqualCode = 15;
-        private static final int lessCode = 16;
-        private static final int lessEqualCode = 17;
-        private static final int andCode = 18;
-        private static final int orCode = 19;
-        private static final int notCode = 20;
-        private static final int oppCode = 21;
-
-        // ops involving transfer of data
-        private static final int litCode = 22;  // litCode a b means "cell a gets b"
-        private static final int copyCode = 23;// copy a b means "cell a gets cell b"
-        private static final int getCode = 24; // op a b means "cell a gets
-        // contents of cell whose
-        // index is stored in b"
-        private static final int putCode = 25;  // op a b means "put contents
-        // of cell b in cell whose offset is stored in cell a"
-
-        // system-level ops:
-        private static final int haltCode = 26;
-        private static final int inputCode = 27;
-        private static final int outputCode = 28;
-        private static final int newlineCode = 29;
-        private static final int symbolCode = 30;
-        private static final int newCode = 31;
-
-        // global variable ops:
-        private static final int allocGlobalCode = 32;
-        private static final int toGlobalCode = 33;
-        private static final int fromGlobalCode = 34;
-
-        // debug ops:
-        private static final int debugCode = 35;
-
-        // return the number of arguments after the opcode,
-        // except ops that have a label return number of arguments
-        // after the label, which always comes immediately after
-        // the opcode
         private static int numArgs( int opcode )
         {
             // highlight specially behaving operations
