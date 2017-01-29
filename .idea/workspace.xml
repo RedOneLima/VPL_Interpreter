@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02e95e33-ffb4-42d4-9671-60ecd935882c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t6.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t7.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/t8.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VPL.java" afterPath="$PROJECT_DIR$/src/VPL.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -171,6 +162,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Kyle Hewitt &lt;khewitt08@live.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -786,12 +782,20 @@
       <updated>1484957507602</updated>
       <workItem from="1484957513266" duration="810000" />
       <workItem from="1484959641245" duration="11000" />
-      <workItem from="1485649723417" duration="12858000" />
+      <workItem from="1485649723417" duration="13508000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;">
+      <created>1485662747319</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1485662747319</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13679000" />
+    <option name="totallyTimeSpent" value="14329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,6 +846,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
