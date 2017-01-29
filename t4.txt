@@ -1,0 +1,39 @@
+0 the good old triple and add 1 or halve algorithm
+0 to test jump and cond jump
+
+4 5  cell 0 is n, cell 1 is 1, cell 2 is 2, cell 3 holds n%2 etc., cell 4 is 3
+
+22 1 1  cell 1 is 1
+22 2 2  cell 2 is 2
+22 4 3  cell 4 is 3
+
+27 0  input n
+
+1 1001   top of loop
+14 3 0 1  cell 3 <-  is n == 1?
+8 1002 3  if cell 3 holds 1 (i.e., n==1), jump to bottom
+
+28 0  display n
+29
+
+13 3 0 2   cell 3 <- n % 2
+14 3 3 1   cell 3 <- is (n%2) == 1?
+8 1003 3  if cell 3 holds 1, jump down'
+
+12 0 0 2   n = n/2
+
+7 1004 skip over the else
+1 1003  case n%2 == 1 --- n is odd
+
+11 0 0 4  n = 3*n
+9 0 0 1  n = n+1  (so is 3n+1)
+
+1 1004  target for skipping
+
+7 1001   jump to top of loop
+1 1002
+
+28 0  output n
+29   newline
+
+26  halt

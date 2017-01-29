@@ -1,0 +1,79 @@
+0  cell 0: 1, cell 1: start of array, cell 2: index
+0    cell 3: # of items, cell 4: temp, cell 5 = n-1
+4 15
+
+22 0 1
+
+27 3  # of items from keyboard
+10 5 3 0
+31 1 3
+
+22 2 0   index = 0
+1 1001  top of loop
+27 4     input into cell 4
+25 1 2 4
+9 2 2 0  increment index
+
+17 4 2 5  cell 4 = is cell 2 < cell 3
+8 1001 4   jump to top to repeat unless done
+
+0 bubble sort the list
+
+22 8 1   hadSwap = true
+
+22 2 1   k = 1
+1 3003
+16 12 2 3      b1 = k<n
+18 12 12 8     b1 = b1 && hadSwap
+8 3001 12     if( b1 ) goto 3001
+7 3002        exit outer loop
+1 3001
+
+   22 8 0     hadSwap = false
+   10 5 3 2   m = n - k
+
+   0  inner (j) loop
+   22 7 0    j = 0
+   1 4003
+   16 13 7 5         b2 = j<m
+   8 4001 13    if b2 jump to 4001
+   7 4002       exit loop if not b2
+   1 4001
+
+      0  body of j loop
+
+          9 11 7 0   j+1 = j+1
+          24 9 1 7   a[j]
+          24 10 1 11 a[j+1]
+          16 14 10 9   b3 = a[j+1] < a[j]
+          8 5001 14    if b3 jump
+          7 5002       skip actions
+          1 5001
+              22 8 1   hadSwap = true
+              23 4 9   temp = a[j]
+              25 1 7 10  store a[j+1] at a[j]
+              25 1 11 4  a[j+1]=temp
+          1 5002
+
+      9 7 7 0   j++
+      7 4003    jump to top of j loop
+   1 4002       exit j loop
+
+   9 2 2 0    k++
+7 3003        jump up to top of outer loop
+1 3002        exit point for outer (k) loop
+
+0  display the array elements
+
+22 6 32
+22 2 0
+10 5 3 0
+1 2001
+24 4 1 2
+28 4
+30 6
+9 2 2 0
+17 4 2 5
+8 2001 4
+
+26
