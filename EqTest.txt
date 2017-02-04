@@ -13,7 +13,7 @@
 22 1 2          Puts lit 2 into [1]
 22 2 2          Puts lit 2 into [2]
 22 3 0          Puts lit 0 into [3]
-
+ 
 
 0               Check ==
 14 4 0 1        since 1 != 2 then [4] = 0(false)

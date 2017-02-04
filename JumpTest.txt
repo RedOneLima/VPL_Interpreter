@@ -1,6 +1,6 @@
 0               This is to test the conditional and uncondition jump
 
-4 2             Make room for 2 boolean values to test the conditional
+4 2             Make room for 2 boolean values to test the conditional-
 22 0 0          False(0) in cell 0
 22 1 1          True(-1) in cell 1
 7 1001          unconditional jump to 1001

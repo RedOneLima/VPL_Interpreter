@@ -1,6 +1,6 @@
 0               Testing comments
 0               More comment testing
-0               This shouldnt appear in the execution of the program
+0               This shouldnt appear in the execution of the program-
 
 4 3             Allocate 3 local spaces
 27 0            Take input and store it in [0]

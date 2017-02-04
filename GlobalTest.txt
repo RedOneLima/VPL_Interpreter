@@ -1,7 +1,7 @@
 0               This tests all of the global operations
 
 32 2            Allocate space for 2 global var
-4 4             Allocate space for 4 local var
+4 4             Allocate space for 4 local var-
 
 22 0 2          put lit 2 in cell 0
 22 1 5          put lit 5 in cell 1

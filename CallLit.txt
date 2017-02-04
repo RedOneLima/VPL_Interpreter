@@ -2,7 +2,7 @@
 0               the subroutine and returning that litteral back to main
 
 
-4 2             Make room for literals in main
+4 2             Make room for literals in main -
 22 0 50         put 50 into cell 0
 3 0             push contents of cell 0 (50) onto new stack
 2 1001          call subroutine at label 1001

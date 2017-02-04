@@ -4,7 +4,7 @@
 22 0 5          set local var 0 to 5
 22 1 2          set local var 1 to 2
 22 2 3          set local var 2 to 3
-22 3 9          set local var 3 to 9
+22 3 9          set local var 3 to 9-
 
 
 0               Test new
