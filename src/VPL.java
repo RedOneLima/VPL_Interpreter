@@ -176,6 +176,7 @@ import java.util.*;
                 c = mem[ip+3];
                 opcode = mem[ip];
                 switch (opcode) {
+
 /*2*/               case callCode:
                         mem[sp] = bp; //puts the previous bp into index for returning from subroutine
                         mem[sp + 1] = ip + 2; //puts the instruction after the call into stack frame for returning from subroutine
@@ -184,12 +185,15 @@ import java.util.*;
                         push = 2; //reset push for next call
                         ip = a; //Move the ip to the first instruction of the new routine marked by the label
                         continue;
+
 /*3*/               case passCode:
                         mem[sp + push++] = mem[bpOffset+a]; //this PUSHes the contents of a onto the upcoming stack frame
                         break;
+
 /*4*/               case allocCode:
                         sp += a; //increases sp by n (ip+1) for local variables
                         break;
+
 /*5*/               case returnCode:
                         rv = mem[bpOffset+a]; //loads the contents of the given cell into rv for return
                         ip = mem[bp+1]; //Moves ip to next instruction in the parent routine

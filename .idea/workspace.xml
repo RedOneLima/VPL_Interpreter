@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02e95e33-ffb4-42d4-9671-60ecd935882c" name="Default" comment="All features implemented and tested. Program is working as it should.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VPL_Interpreter/VPL.class" afterPath="$PROJECT_DIR$/out/production/VPL_Interpreter/VPL.class" />
+    <list default="true" id="02e95e33-ffb4-42d4-9671-60ecd935882c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CallLit.txt" afterPath="$PROJECT_DIR$/CallLit.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EqTest.txt" afterPath="$PROJECT_DIR$/EqTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalTest.txt" afterPath="$PROJECT_DIR$/GlobalTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HeapTest.txt" afterPath="$PROJECT_DIR$/HeapTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JumpTest.txt" afterPath="$PROJECT_DIR$/JumpTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charTest.txt" afterPath="$PROJECT_DIR$/charTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo1.txt" afterPath="$PROJECT_DIR$/demo1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t2.txt" afterPath="$PROJECT_DIR$/t2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VPL.java" afterPath="$PROJECT_DIR$/src/VPL.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +35,8 @@
           <file leaf-file-name="VPL.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/VPL.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1079">
-                  <caret line="186" column="34" lean-forward="false" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+                <state relative-caret-position="335">
+                  <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#main#0;class#VPL#0" expanded="false" />
@@ -198,7 +190,6 @@
         <option value="$PROJECT_DIR$/t1.txt" />
         <option value="$PROJECT_DIR$/src/PrintNum.java" />
         <option value="$PROJECT_DIR$/src/PrintTest.java" />
-        <option value="$PROJECT_DIR$/src/VPL.java" />
         <option value="$PROJECT_DIR$/t2.txt" />
         <option value="$PROJECT_DIR$/CallLit.txt" />
         <option value="$PROJECT_DIR$/EqTest.txt" />
@@ -207,6 +198,7 @@
         <option value="$PROJECT_DIR$/demo1.txt" />
         <option value="$PROJECT_DIR$/JumpTest.txt" />
         <option value="$PROJECT_DIR$/charTest.txt" />
+        <option value="$PROJECT_DIR$/src/VPL.java" />
       </list>
     </option>
   </component>
@@ -838,7 +830,7 @@
       <workItem from="1484959641245" duration="11000" />
       <workItem from="1485649723417" duration="13508000" />
       <workItem from="1486076937704" duration="4455000" />
-      <workItem from="1486143886319" duration="31639000" />
+      <workItem from="1486143886319" duration="31769000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;">
       <created>1485662747319</created>
@@ -875,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486178214234</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All features implemented and tested. Program is working as it should.">
+      <created>1486178399802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1486178399802</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50423000" />
+    <option name="totallyTimeSpent" value="50553000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1257,21 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VPL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="186" column="34" lean-forward="false" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#VPL#0" expanded="false" />
-            <element signature="method#numArgs#0;class#VPL#0" expanded="false" />
-            <element signature="method#showMem#0;class#VPL#0" expanded="false" />
-            <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
-            <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EqTest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1333,6 +1317,21 @@
         <state relative-caret-position="200">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VPL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#VPL#0" expanded="false" />
+            <element signature="method#numArgs#0;class#VPL#0" expanded="false" />
+            <element signature="method#showMem#0;class#VPL#0" expanded="false" />
+            <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
+            <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
