@@ -171,241 +171,204 @@ import java.util.*;
             int numGlobal =0;
             while(ip<k) {
                 bpOffset = bp+2;
+                a = mem[ip+1];
+                b = mem[ip+2];
+                c = mem[ip+3];
                 opcode = mem[ip];
                 switch (opcode) {
-                    case noopCode:              //0//
-                        ip++;//This should not get called with current implementation of the loader
-                        break;
-
-                    case labelCode:             //1//
-                        //Do nothing
-                        ip += 2; //move ip forward to next instruction. This should never happen, but in case it does the program will continue
-                        break;
-
-                    case callCode:              //2//
+/*2*/               case callCode:
                         mem[sp] = bp; //puts the previous bp into index for returning from subroutine
                         mem[sp + 1] = ip + 2; //puts the instruction after the call into stack frame for returning from subroutine
                         bp = sp; //increase the bp to the beginning of the new stack frame
                         sp += push; //Move the sp to the end of the stack frame
                         push = 2; //reset push for next call
-                        ip = mem[ip+1]; //Move the ip to the first instruction of the new routine marked by the label
+                        ip = a; //Move the ip to the first instruction of the new routine marked by the label
+                        continue;
+/*3*/               case passCode:
+                        mem[sp + push++] = mem[bpOffset+a]; //this PUSHes the contents of a onto the upcoming stack frame
                         break;
-
-                    case passCode:              //3//
-                        mem[sp + push++] = mem[bpOffset+mem[ip+1]]; //this PUSHes the contents of a onto the upcoming stack frame
-                        ip += 2;
+/*4*/               case allocCode:
+                        sp += a; //increases sp by n (ip+1) for local variables
                         break;
-
-                    case allocCode:             //4//
-                        sp += mem[ip+1]; //increases sp by n (ip+1) for local variables
-                        ip += 2;
-                        break;
-
-                    case returnCode:            //5//
-                        rv = mem[bpOffset+mem[ip+1]]; //loads the contents of the given cell into rv for return
+/*5*/               case returnCode:
+                        rv = mem[bpOffset+a]; //loads the contents of the given cell into rv for return
                         ip = mem[bp+1]; //Moves ip to next instruction in the parent routine
                         sp = bp; //moves sp back to top of parent stack frame
                         bp = mem[bp]; //Moves bp back to base of parent stack frame
+                        continue;
+/*6*/
+                    case getRetvalCode:
+                        mem[bpOffset+a] = rv; //Puts returned value into ath cell in current stack frame
                         break;
 
-                    case getRetvalCode:         //6//
-                        mem[bpOffset+mem[ip+1]] = rv; //Puts returned value into ath cell in current stack frame
-                        ip += 2;
-                        break;
+/*7*/               case jumpCode:
+                        ip = a; //jump to location in ip+1
+                        continue;
 
-                    case jumpCode:              //7//
-                        ip = mem[ip+1]; //jump to location in ip+1
-                        break;
-
-                    case condJumpCode:          //8//
-                        if (mem[bpOffset+mem[ip+2]] == 0) {
+/*8*/               case condJumpCode:
+                        if (mem[bpOffset+b] == 0) {
                             //if the contents of the given cell is 0 the branch condition fails and ip moves to the next sequential instruction
-                            ip += 3;
                         } else {
                             //otherwise if the contents are non-zero, then the branch is taken and ip moves to location in ip+1
-                            ip = mem[ip+1];
+                            ip = a;
+                            continue;
                         }
                         break;
 
-                    case addCode:               //9//
-                        mem[bpOffset+mem[ip+1]] = mem[bpOffset+mem[ip+2]] + mem[bpOffset+mem[ip+3]]; //a = mem[ip+2] + c
-                        ip += 4;
+/*9*/               case addCode:
+                        mem[bpOffset+a] = mem[bpOffset+b] + mem[bpOffset+c]; //a = b + c
                         break;
 
-                    case subCode:              //10//
-                        mem[bpOffset+mem[ip+1]] = mem[bpOffset+mem[ip+2]] - mem[bpOffset+mem[ip+3]]; //a = mem[ip+2] - c
-                        ip += 4;
+/*10*/              case subCode:
+                        mem[bpOffset+a] = mem[bpOffset+b] - mem[bpOffset+c]; //a = b - c
                         break;
 
-                    case multCode:             //11//
-                        mem[bpOffset+mem[ip+1]] = mem[bpOffset+mem[ip+2]] * mem[bpOffset+mem[ip+3]]; //a = b * c
-                        ip += 4;
+/*11*/              case multCode:
+                        mem[bpOffset+a] = mem[bpOffset+b] * mem[bpOffset+c]; //a = b * c
                         break;
 
-                    case divCode:              //12//
-                        mem[bpOffset+mem[ip+1]] = mem[bpOffset+mem[ip+2]] / mem[bpOffset+mem[ip+3]]; //a = b / c
-                        ip += 4;
+/*12*/              case divCode:
+                        mem[bpOffset+a] = mem[bpOffset+b] / mem[bpOffset+c]; //a = b / c
                         break;
 
-                    case remCode:              //13//
-                        mem[bpOffset+mem[ip+1]] = mem[bpOffset+mem[ip+2]] % mem[bpOffset+mem[ip+3]]; //a = b % c
-                        ip += 4;
+/*13*/              case remCode:
+                        mem[bpOffset+a] = mem[bpOffset+b] % mem[bpOffset+c]; //a = b % c
                         break;
 
-                    case equalCode:            //14//
-                        if (mem[bpOffset+mem[ip+2]] - mem[bpOffset+mem[ip+3]] == 0) { //checks to see if b == c by b-c and checking for zero
+/*14*/              case equalCode:
+                        if (mem[bpOffset+b] - mem[bpOffset+c] == 0) { //checks to see if b == c by b-c and checking for zero
                             mem[bpOffset + mem[ip + 1]] = 1;  //if zero then they are equal and the boolean value 1 (true) is saved in a
                         } else { //if the difference isn't zero
                             mem[bpOffset + mem[ip + 1]] = 0; //not equal and the boolean value 0 (false) is saved in a
                         }
-                        ip += 4;
                         break;
 
-                    case notEqualCode:         //15//
-                        if (mem[bpOffset + mem[ip + 2]] - mem[bpOffset + mem[ip + 3]] != 0) { //checks to see if b != c by b-c and checking for zero
+/*15*/              case notEqualCode:
+                        if (mem[bpOffset + b] - mem[bpOffset + c] != 0) { //checks to see if b != c by b-c and checking for zero
                             mem[bpOffset + mem[ip + 1]] = 1;  //if not zero then they aren't equal and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference is zero
                             mem[bpOffset + mem[ip + 1]] = 0; //b and c are equal and the boolean value 0 (false) is saved in cell a
                         }
-                        ip += 4;
                         break;
 
-                    case lessCode:             //16//
-                        if (mem[bpOffset + mem[ip + 2]] - mem[bpOffset + mem[ip + 3]] < 0) { //checks to see if b < c by b-c and checking for a negative
+/*16*/              case lessCode:
+                        if (mem[bpOffset + b] - mem[bpOffset + c] < 0) { //checks to see if b < c by b-c and checking for a negative
                             mem[bpOffset + mem[ip + 1]] = 1;  //if below zero then b is less than c and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference isn't below zero
                             mem[bpOffset + mem[ip + 1]] = 0; //not less than and the boolean value 0 (false) is saved in cell a
                         }
-                        ip += 4;
                         break;
 
-                    case lessEqualCode:        //17//
-                        if (mem[bpOffset + mem[ip + 2]] - mem[bpOffset + mem[ip + 3]] <= 0) { //checks to see if b <= c by b-c and checking for a negative or zero
+/*17*/              case lessEqualCode:
+                        if (mem[bpOffset + b] - mem[bpOffset + c] <= 0) { //checks to see if b <= c by b-c and checking for a negative or zero
                             mem[bpOffset + mem[ip + 1]] = 1;  //if zero or less, then b is less than or equal to c and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference isn't zero or less
                             mem[bpOffset + mem[ip + 1]] = 0; //not less than or equal and the boolean value 0 (false) is saved in cell a
                         }
-                        ip += 4;
                         break;
 
-                    case andCode:              //18//
-                        if (mem[bpOffset + mem[ip + 2]] != 0 && mem[bpOffset + mem[ip + 3]] != 0) { //checks to see if b AND c are not zero
+/*18*/              case andCode:
+                        if (mem[bpOffset + b] != 0 && mem[bpOffset + c] != 0) { //checks to see if b AND c are not zero
                             mem[bpOffset + mem[ip + 1]] = 1;  //if both are non-zero than the boolean value 1 (true) is saved in cell a
                         } else { //if either b or c contains zero
                             mem[bpOffset + mem[ip + 1]] = 0; //the boolean value 0 (false) is saved in cell a
                         }
-                        ip += 4;
                         break;
 
-                    case orCode:               //19//
-                        if (mem[bpOffset + mem[ip + 2]] != 0 || mem[bpOffset + mem[ip + 3]] != 0) { //checks to see if b OR c are not zero
+/*19*/              case orCode:
+                        if (mem[bpOffset + b] != 0 || mem[bpOffset + c] != 0) { //checks to see if b OR c are not zero
                             mem[bpOffset + mem[ip + 1]] = 1;  //if at least one is non-zero than the boolean value 1 (true) is saved in cell a
                         } else { //if both b and c contain zero
                             mem[bpOffset + mem[ip + 1]] = 0; //the boolean value 0 (false) is saved in cell a
                         }
-                        ip += 4;
                         break;
 
-                    case notCode:              //20//
-                        if (mem[bpOffset + mem[ip + 2]] == 0) {
-                            mem[bpOffset + mem[ip+1]] = 1; //put the opposite boolean value of cell b into cell a
+/*20*/              case notCode:
+                        if (mem[bpOffset + b] == 0) {
+                            mem[bpOffset + a] = 1; //put the opposite boolean value of cell b into cell a
                         } else {
                             mem[bpOffset + mem[ip + 1]] = 0; //put the opposite boolean value of cell b into cell a
                         }
-                        ip += 3;
                         break;
 
-                    case oppCode:              //21//
+/*21*/              case oppCode:
                         //sub the value in cell b by twice its value to get the opposite sign of the same abs value
-                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + mem[ip + 2]] * -1;
-                        ip += 3;
+                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + b] * -1;
                         break;
 
-                    case litCode:              //22//
-                        mem[bpOffset + mem[ip + 1]] = mem[ip + 2]; //puts the literal in cell b into virtual stack position in cell a
-                        ip += 3;
+/*22*/              case litCode:
+                        mem[bpOffset + mem[ip + 1]] = b; //puts the literal in cell b into virtual stack position in cell a
                         break;
 
-                    case copyCode:             //23//
-                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + mem[ip + 2]]; //copies the value from cell b into cell a
-                        ip += 3;
+/*23*/              case copyCode:
+                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + b]; //copies the value from cell b into cell a
                         break;
 
-                    case getCode:              //24//
-                        mem[bpOffset+mem[ip+1]] = mem[mem[bpOffset+mem[ip+2]] + mem[bpOffset+mem[ip+3]]]; //gets from the heap from the base index pointed to by ip+2 and offset of ip+3
-                        ip += 4;
+/*24*/               case getCode:
+                        mem[bpOffset+a] = mem[mem[bpOffset+b] + mem[bpOffset+c]]; //gets from the heap from the base index pointed to by ip+2 and offset of ip+3
                         break;
 
-                    case putCode:              //25//
-                        mem[mem[bpOffset+mem[ip+1]] + mem[bpOffset+mem[ip+2]]] = mem[bpOffset+mem[ip+3]]; //puts the contents of ip+3 into the heap location whose base is ip+1 and offset is ip+2
-                        ip += 4;
+/*25*/              case putCode:
+                        mem[mem[bpOffset+a] + mem[bpOffset+b]] = mem[bpOffset+c]; //puts the contents of ip+3 into the heap location whose base is ip+1 and offset is ip+2
                         break;
 
-                    case haltCode:             //26//
+/*26*/              case haltCode:
                         System.exit(0);
 
-                    case inputCode:            //27//
+/*27*/              case inputCode:
                         System.out.print("? ");//prompt for user input
                         int in = input.nextInt(); //takes user input
-                        mem[bpOffset + mem[ip + 1]] = in; //puts user input into cell a
-                        ip += 2;
+                        mem[bpOffset + a] = in; //puts user input into cell a
                         break;
 
-                    case outputCode:               //28//
-                        System.out.print("> " + mem[bpOffset + mem[ip + 1]]); //displays the contents of cell a
-                        ip += 2;
+/*28*/              case outputCode:
+                        System.out.print("> " + mem[bpOffset + a]); //displays the contents of cell a
                         break;
 
-                    case newlineCode:              //29//
+/*29*/              case newlineCode:
                         System.out.println(); //move cursor to next line
-                        ip += 1;
                         break;
 
-                    case symbolCode:               //30//
-                        if(mem[ip+1]>=32 && mem[ip+1]<=126)
-                            System.out.print((char)mem[ip+1]);
-                        ip += 2;
+/*30*/              case symbolCode:
+                        if(a>=32 && a<=126)
+                            System.out.print((char)a);
                         break;
 
-                    case newCode:                  //31//
-                        hp -= mem[ip+2]; //decrease hp to make room on the heap designated by the 2nd arg
-                        mem[bpOffset+mem[ip+1]] = hp; //save the index of hp to signify the start of the obj
-                        ip += 3;
+/*31*/              case newCode:
+                        hp -= b; //decrease hp to make room on the heap designated by the 2nd arg
+                        mem[bpOffset+a] = hp; //save the index of hp to signify the start of the obj
                         break;
 
-                    case allocGlobalCode:          //32//
+/*32*/              case allocGlobalCode:
                         if(ip!=0) System.out.println("Global space must be allocated at the beginning of the program");
-                        numGlobal = mem[ip+1];
+                        numGlobal = a;
                         bp+=numGlobal; //Moves bp to make room for globals
                         sp+=numGlobal; //Moves sp to keep the inital stack frame integraty
-                        ip += 2;
                         break;
 
-                    case toGlobalCode:             //33//
-                        if(mem[ip+1]<numGlobal)//makes sure it doesn't exceed global space
-                            mem[gp + mem[ip+1]] = mem[bpOffset+mem[ip+2]]; //save the value in ip+2 into global whos offset is ip+1
+/*33*/              case toGlobalCode:
+                        if(a<numGlobal)//makes sure it doesn't exceed global space
+                            mem[gp + a] = mem[bpOffset+b]; //save the value in ip+2 into global whos offset is ip+1
                         else
                             System.out.print("Global does not exist. No action taken");
-                        ip += 3;
                         break;
 
-                    case fromGlobalCode:           //34//
-                        if(mem[ip+2]<numGlobal) //makes sure it doesn't exceed global space
-                            mem[bpOffset+mem[ip+1]] = mem[gp + mem[ip+2]]; //save the value into ip+2 from global who's offset is ip+1
+/*34*/              case fromGlobalCode:
+                        if(b<numGlobal) //makes sure it doesn't exceed global space
+                            mem[bpOffset+a] = mem[gp + b]; //save the value into ip+2 from global who's offset is ip+1
                         else
                             System.out.print("Global does not exist. No action taken");
-                        ip += 3;
                         break;
 
-                    case debugCode:                //35//
+/*35*/              case debugCode:
                         showStackFrame(); //used to print out the current stack frame for debugging
                         showHeap();//used to print out the current heap for debugging
-                        ip++;
                         break;
 
                     default:
                         System.out.println("Something went wrong!");
                 }
+                ip+=numArgs(opcode)+1;
             }
 
         }//run

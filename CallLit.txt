@@ -7,7 +7,7 @@
 3 0             push contents of cell 0 (50) onto new stack
 2 1001          call subroutine at label 1001
 6 1             puts the return value (-50) into stack cell 1
-35              debug code to show stack and heap
+35              BP[ 0, 0, 50, -50 ]SP
 26              end program
 
 0               At this point, stack should be BP[ 0, 0, 50, -50 ]SP
