@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02e95e33-ffb4-42d4-9671-60ecd935882c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VPL_Interpreter/VPL.class" afterPath="$PROJECT_DIR$/out/production/VPL_Interpreter/VPL.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charTest.txt" afterPath="$PROJECT_DIR$/charTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VPL.java" afterPath="$PROJECT_DIR$/src/VPL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t1.txt" afterPath="$PROJECT_DIR$/t1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t3.txt" afterPath="$PROJECT_DIR$/t3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t4.txt" afterPath="$PROJECT_DIR$/t4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t5.txt" afterPath="$PROJECT_DIR$/t5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t6.txt" afterPath="$PROJECT_DIR$/t6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t7.txt" afterPath="$PROJECT_DIR$/t7.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t8.txt" afterPath="$PROJECT_DIR$/t8.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +32,14 @@
     <favorites_list name="VPL_Interpreter" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.34583166">
+    <splitter split-orientation="horizontal" split-proportion="0.7395293">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="VPL.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="VPL.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/VPL.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="723">
-                  <caret line="461" column="11" lean-forward="false" selection-start-line="461" selection-start-column="11" selection-end-line="461" selection-end-column="11" />
+                <state relative-caret-position="403">
+                  <caret line="337" column="45" lean-forward="false" selection-start-line="337" selection-start-column="45" selection-end-line="337" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#main#0;class#VPL#0" expanded="false" />
@@ -55,71 +52,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="t3.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/t3.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="t4.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/t4.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="t1.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/t1.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="586">
-                  <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="t5.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/t5.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="t6.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/t6.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="811">
-                  <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="t7.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/t7.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="t8.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/t8.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="461">
-                  <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+                <state relative-caret-position="563">
+                  <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -179,11 +116,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="charTest.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="charTest.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/charTest.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="748">
-                  <caret line="116" column="23" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+                <state relative-caret-position="438">
+                  <caret line="130" column="5" lean-forward="false" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -199,10 +136,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="t2.txt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="t2.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/t2.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-114">
+                <state relative-caret-position="200">
                   <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
                   <folding />
                 </state>
@@ -225,9 +162,9 @@
       <find>showstack</find>
       <find>bp + 2</find>
       <find>mem[ip + 3]</find>
-      <find>mem[ip+1]</find>
       <find>mem[ip+2]</find>
       <find>mem[ip+3]</find>
+      <find>mem[ip+1]</find>
     </findStrings>
     <replaceStrings>
       <replace>mem[ip+1]</replace>
@@ -236,8 +173,8 @@
       <replace>bp+2</replace>
       <replace>bpOffset</replace>
       <replace>b</replace>
-      <replace>a</replace>
       <replace>c</replace>
+      <replace>a</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -266,15 +203,17 @@
         <option value="$PROJECT_DIR$/GlobalTest.txt" />
         <option value="$PROJECT_DIR$/demo1.txt" />
         <option value="$PROJECT_DIR$/JumpTest.txt" />
-        <option value="$PROJECT_DIR$/charTest.txt" />
-        <option value="$PROJECT_DIR$/src/VPL.java" />
-        <option value="$PROJECT_DIR$/t1.txt" />
         <option value="$PROJECT_DIR$/t3.txt" />
         <option value="$PROJECT_DIR$/t4.txt" />
         <option value="$PROJECT_DIR$/t5.txt" />
         <option value="$PROJECT_DIR$/t6.txt" />
         <option value="$PROJECT_DIR$/t7.txt" />
         <option value="$PROJECT_DIR$/t8.txt" />
+        <option value="$PROJECT_DIR$/fibTest.txt" />
+        <option value="$PROJECT_DIR$/t1.txt" />
+        <option value="$PROJECT_DIR$/src/MakeTest.java" />
+        <option value="$PROJECT_DIR$/src/VPL.java" />
+        <option value="$PROJECT_DIR$/charTest.txt" />
       </list>
     </option>
   </component>
@@ -412,6 +351,21 @@
     <configuration default="false" name="PrintTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="PrintTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="VPL_Interpreter" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MakeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="MakeTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -871,16 +825,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.VPL" />
       <item index="1" class="java.lang.String" itemvalue="Application.PrintNum" />
       <item index="2" class="java.lang.String" itemvalue="Application.PrintTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MakeTest" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.VPL" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PrintTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PrintNum" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MakeTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PrintTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.PrintNum" />
       </list>
     </recent_temporary>
   </component>
@@ -906,7 +862,7 @@
       <workItem from="1484959641245" duration="11000" />
       <workItem from="1485649723417" duration="13508000" />
       <workItem from="1486076937704" duration="4455000" />
-      <workItem from="1486143886319" duration="32094000" />
+      <workItem from="1486143886319" duration="37605000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;">
       <created>1485662747319</created>
@@ -964,11 +920,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486178664984</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="All features implemented and tested. Program is working as it should.">
+      <created>1486178847848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1486178847848</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50878000" />
+    <option name="totallyTimeSpent" value="56389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -981,7 +944,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3229" y="-11" width="2902" height="1597" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -992,13 +955,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3475682" sideWeight="0.5045045" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.057302587" sideWeight="0.4954955" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375262" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4448424" sideWeight="0.4954955" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34598854" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10782918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1027,10 +990,54 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>310</line>
+          <properties />
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>311</line>
+          <properties />
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>312</line>
+          <properties />
+          <option name="timeStamp" value="290" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>335</line>
+          <properties />
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>336</line>
+          <properties />
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>337</line>
+          <properties />
+          <option name="timeStamp" value="296" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/VPL.java</url>
+          <line>338</line>
+          <properties />
+          <option name="timeStamp" value="297" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="288" />
+      <option name="time" value="298" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1039,6 +1046,7 @@
         <watch expression="sp" language="JAVA" />
         <watch expression="mem" language="JAVA" />
         <watch expression="opcode" language="JAVA" />
+        <watch expression="mem[207]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -1330,49 +1338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/charTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="116" column="23" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CallLit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/t2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
+        <state relative-caret-position="200">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VPL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="461" column="11" lean-forward="false" selection-start-line="461" selection-start-column="11" selection-end-line="461" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#VPL#0" expanded="false" />
-            <element signature="method#numArgs#0;class#VPL#0" expanded="false" />
-            <element signature="method#showMem#0;class#VPL#0" expanded="false" />
-            <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
-            <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1421,6 +1390,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fibTest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CallLit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MakeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VPL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="337" column="45" lean-forward="false" selection-start-line="337" selection-start-column="45" selection-end-line="337" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#VPL#0" expanded="false" />
+            <element signature="method#numArgs#0;class#VPL#0" expanded="false" />
+            <element signature="method#showMem#0;class#VPL#0" expanded="false" />
+            <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
+            <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/charTest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="130" column="5" lean-forward="false" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
           <folding />
         </state>
       </provider>

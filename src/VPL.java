@@ -6,7 +6,7 @@ import java.util.*;
 
     public class VPL
     {
-        static final int max = 10000;
+        static final int max = 100000;
         static int[] mem = new int[max];
         static int ip, bp, sp, rv, hp, numPassed, gp, k;
         static String fileName;
@@ -241,49 +241,49 @@ import java.util.*;
 
 /*14*/              case equalCode:
                         if (mem[bpOffset+b] - mem[bpOffset+c] == 0) { //checks to see if b == c by b-c and checking for zero
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if zero then they are equal and the boolean value 1 (true) is saved in a
+                            mem[bpOffset + a] = 1;  //if zero then they are equal and the boolean value 1 (true) is saved in a
                         } else { //if the difference isn't zero
-                            mem[bpOffset + mem[ip + 1]] = 0; //not equal and the boolean value 0 (false) is saved in a
+                            mem[bpOffset + a] = 0; //not equal and the boolean value 0 (false) is saved in a
                         }
                         break;
 
 /*15*/              case notEqualCode:
                         if (mem[bpOffset + b] - mem[bpOffset + c] != 0) { //checks to see if b != c by b-c and checking for zero
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if not zero then they aren't equal and the boolean value 1 (true) is saved in cell a
+                            mem[bpOffset + a] = 1;  //if not zero then they aren't equal and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference is zero
-                            mem[bpOffset + mem[ip + 1]] = 0; //b and c are equal and the boolean value 0 (false) is saved in cell a
+                            mem[bpOffset + a] = 0; //b and c are equal and the boolean value 0 (false) is saved in cell a
                         }
                         break;
 
 /*16*/              case lessCode:
                         if (mem[bpOffset + b] - mem[bpOffset + c] < 0) { //checks to see if b < c by b-c and checking for a negative
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if below zero then b is less than c and the boolean value 1 (true) is saved in cell a
+                            mem[bpOffset + a] = 1;  //if below zero then b is less than c and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference isn't below zero
-                            mem[bpOffset + mem[ip + 1]] = 0; //not less than and the boolean value 0 (false) is saved in cell a
+                            mem[bpOffset + a] = 0; //not less than and the boolean value 0 (false) is saved in cell a
                         }
                         break;
 
 /*17*/              case lessEqualCode:
                         if (mem[bpOffset + b] - mem[bpOffset + c] <= 0) { //checks to see if b <= c by b-c and checking for a negative or zero
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if zero or less, then b is less than or equal to c and the boolean value 1 (true) is saved in cell a
+                            mem[bpOffset + a] = 1;  //if zero or less, then b is less than or equal to c and the boolean value 1 (true) is saved in cell a
                         } else { //if the difference isn't zero or less
-                            mem[bpOffset + mem[ip + 1]] = 0; //not less than or equal and the boolean value 0 (false) is saved in cell a
+                            mem[bpOffset + a] = 0; //not less than or equal and the boolean value 0 (false) is saved in cell a
                         }
                         break;
 
 /*18*/              case andCode:
                         if (mem[bpOffset + b] != 0 && mem[bpOffset + c] != 0) { //checks to see if b AND c are not zero
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if both are non-zero than the boolean value 1 (true) is saved in cell a
+                            mem[bpOffset + a] = 1;  //if both are non-zero than the boolean value 1 (true) is saved in cell a
                         } else { //if either b or c contains zero
-                            mem[bpOffset + mem[ip + 1]] = 0; //the boolean value 0 (false) is saved in cell a
+                            mem[bpOffset + a] = 0; //the boolean value 0 (false) is saved in cell a
                         }
                         break;
 
 /*19*/              case orCode:
                         if (mem[bpOffset + b] != 0 || mem[bpOffset + c] != 0) { //checks to see if b OR c are not zero
-                            mem[bpOffset + mem[ip + 1]] = 1;  //if at least one is non-zero than the boolean value 1 (true) is saved in cell a
+                            mem[bpOffset + a] = 1;  //if at least one is non-zero than the boolean value 1 (true) is saved in cell a
                         } else { //if both b and c contain zero
-                            mem[bpOffset + mem[ip + 1]] = 0; //the boolean value 0 (false) is saved in cell a
+                            mem[bpOffset + a] = 0; //the boolean value 0 (false) is saved in cell a
                         }
                         break;
 
@@ -291,21 +291,21 @@ import java.util.*;
                         if (mem[bpOffset + b] == 0) {
                             mem[bpOffset + a] = 1; //put the opposite boolean value of cell b into cell a
                         } else {
-                            mem[bpOffset + mem[ip + 1]] = 0; //put the opposite boolean value of cell b into cell a
+                            mem[bpOffset + a] = 0; //put the opposite boolean value of cell b into cell a
                         }
                         break;
 
 /*21*/              case oppCode:
                         //sub the value in cell b by twice its value to get the opposite sign of the same abs value
-                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + b] * -1;
+                        mem[bpOffset + a] = mem[bpOffset + b] * -1;
                         break;
 
 /*22*/              case litCode:
-                        mem[bpOffset + mem[ip + 1]] = b; //puts the literal in cell b into virtual stack position in cell a
+                        mem[bpOffset + a] = b; //puts the literal in cell b into virtual stack position in cell a
                         break;
 
 /*23*/              case copyCode:
-                        mem[bpOffset + mem[ip + 1]] = mem[bpOffset + b]; //copies the value from cell b into cell a
+                        mem[bpOffset + a] = mem[bpOffset + b]; //copies the value from cell b into cell a
                         break;
 
 /*24*/               case getCode:
@@ -334,8 +334,8 @@ import java.util.*;
                         break;
 
 /*30*/              case symbolCode:
-                        if(a>=32 && a<=126)
-                            System.out.print((char)a);
+                        if(mem[bpOffset+a]>=32 && mem[bpOffset+a]<=126)
+                            System.out.print((char)mem[bpOffset+a]);
                         break;
 
 /*31*/              case newCode:
