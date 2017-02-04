@@ -61,7 +61,7 @@
 
    9 2 2 0    k++
 7 3003        jump up to top of outer loop
-1 3002        exit point for outer (k) loop
+1 3002        exit point for outer (k) loop -
 
 0  display the array elements
 

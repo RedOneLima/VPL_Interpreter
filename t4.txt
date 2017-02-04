@@ -36,4 +36,4 @@
 28 0  output n
 29   newline
 
-26  halt
+26  halt -

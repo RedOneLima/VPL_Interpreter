@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="02e95e33-ffb4-42d4-9671-60ecd935882c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VPL.java" afterPath="$PROJECT_DIR$/src/VPL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t1.txt" afterPath="$PROJECT_DIR$/t1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t3.txt" afterPath="$PROJECT_DIR$/t3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t4.txt" afterPath="$PROJECT_DIR$/t4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t5.txt" afterPath="$PROJECT_DIR$/t5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t6.txt" afterPath="$PROJECT_DIR$/t6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t7.txt" afterPath="$PROJECT_DIR$/t7.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/t8.txt" afterPath="$PROJECT_DIR$/t8.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,10 +38,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.34583166">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="VPL.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="VPL.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/VPL.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
+                <state relative-caret-position="723">
                   <caret line="461" column="11" lean-forward="false" selection-start-line="461" selection-start-column="11" selection-end-line="461" selection-end-column="11" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -45,6 +51,76 @@
                     <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
                     <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t3.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t3.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="575">
+                  <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t4.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t4.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="861">
+                  <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t1.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="586">
+                  <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t5.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t5.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="861">
+                  <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t6.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t6.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="811">
+                  <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t7.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/t7.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="861">
+                  <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="t8.txt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/t8.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="461">
+                  <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -126,7 +202,7 @@
           <file leaf-file-name="t2.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/t2.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
+                <state relative-caret-position="-114">
                   <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
                   <folding />
                 </state>
@@ -181,13 +257,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/IntPair.java" />
-        <option value="$PROJECT_DIR$/t3.txt" />
-        <option value="$PROJECT_DIR$/t4.txt" />
-        <option value="$PROJECT_DIR$/t5.txt" />
-        <option value="$PROJECT_DIR$/t6.txt" />
-        <option value="$PROJECT_DIR$/t7.txt" />
-        <option value="$PROJECT_DIR$/t8.txt" />
-        <option value="$PROJECT_DIR$/t1.txt" />
         <option value="$PROJECT_DIR$/src/PrintNum.java" />
         <option value="$PROJECT_DIR$/src/PrintTest.java" />
         <option value="$PROJECT_DIR$/t2.txt" />
@@ -199,6 +268,13 @@
         <option value="$PROJECT_DIR$/JumpTest.txt" />
         <option value="$PROJECT_DIR$/charTest.txt" />
         <option value="$PROJECT_DIR$/src/VPL.java" />
+        <option value="$PROJECT_DIR$/t1.txt" />
+        <option value="$PROJECT_DIR$/t3.txt" />
+        <option value="$PROJECT_DIR$/t4.txt" />
+        <option value="$PROJECT_DIR$/t5.txt" />
+        <option value="$PROJECT_DIR$/t6.txt" />
+        <option value="$PROJECT_DIR$/t7.txt" />
+        <option value="$PROJECT_DIR$/t8.txt" />
       </list>
     </option>
   </component>
@@ -830,7 +906,7 @@
       <workItem from="1484959641245" duration="11000" />
       <workItem from="1485649723417" duration="13508000" />
       <workItem from="1486076937704" duration="4455000" />
-      <workItem from="1486143886319" duration="31913000" />
+      <workItem from="1486143886319" duration="32094000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;All but heap code implemented. All Op codes tested and successful. All test cases execute without error but output validity is not yet checked.&quot;">
       <created>1485662747319</created>
@@ -881,11 +957,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486178521292</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="All features implemented and tested. Program is working as it should.">
+      <created>1486178664984</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1486178664984</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50697000" />
+    <option name="totallyTimeSpent" value="50878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1183,58 +1266,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/t5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="70" column="2" lean-forward="false" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1975">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IntPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
-          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1251,14 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1306">
-          <caret line="108" column="2" lean-forward="false" selection-start-line="108" selection-start-column="2" selection-end-line="108" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1321,7 +1348,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/t2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="-114">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
@@ -1329,7 +1356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VPL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="723">
           <caret line="461" column="11" lean-forward="false" selection-start-line="461" selection-start-column="11" selection-end-line="461" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1339,6 +1366,62 @@
             <element signature="method#showStackFrame#0;class#VPL#0" expanded="false" />
             <element signature="method#showHeap#0;class#VPL#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

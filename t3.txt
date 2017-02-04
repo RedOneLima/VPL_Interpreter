@@ -21,4 +21,4 @@
 11 5 0 4  cell 5 gets n * (n-1)!
 5 5   return cell 5 which holds n!
 1 2001  target for jump
-5 1    return cell 1 which is 1 which is 0! or 1!
+5 1    return cell 1 which is 1 which is 0! or 1! -
