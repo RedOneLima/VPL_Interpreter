@@ -1,0 +1,51 @@
+0 ####   [0] = lit 1     [1] = lit 2     [2] = lit 2
+0 ####   [3] = lit 0     [4] = fail(==)  [5] = pass(==)
+0 ####   [6] = fail(!=)  [7] = pass(!=)  [8] = fail(<)
+0 ####   [9] = pass(<)   [10] = fail(<=) [11] = pass(<=)
+0 ####   [12] = fail(&&) [13] = pass(&&) [14] = fail(||)
+0 ####   [15] = psas(||) [16] = result1(!)  [17] = result2(!)
+
+0        This tests all the equality operations and copy
+
+4 18             Allocate 18 spaces for variables
+
+22 0 1          Puts lit 1 into [0]
+22 1 2          Puts lit 2 into [1]
+22 2 2          Puts lit 2 into [2]
+22 3 0          Puts lit 0 into [3]
+
+
+0               Check ==
+14 4 0 1        since 1 != 2 then [4] = 0(false)
+14 5 1 2        since 2 == 2 then [5] = 1(true)
+
+0               Check !=
+15 6 1 2        since 2 == 2 then [6] = 0(false)
+15 7 0 1        since 1 != 2 then [7] = 1(true)
+
+0               Check <
+16 8 1 2        since 2 !< 2 then [8] = 0(false)
+16 9 0 1        since 1 < 2 then [9] = 1(pass)
+
+0               Check <=
+17 10 1 0       since 2 !<= 1 then [10] = 0(false)
+17 11 1 2       since 2 <= 2 then [11] = 1(true)
+
+0               Check &&
+18 12 3 2       0 && 2 = 0(false)
+18 13 0 1       1 && 2 = 1(true)
+
+0               Check ||
+19 14 3 3       0 || 0 = 0(false)
+19 15 3 2       0 || 2 = 1(true)
+
+0               Check !
+20 16 3         !0 = 1(true)
+20 17 0         !1 = 0(false)
+
+0               Check copy
+23 0 2          copy [2] into [0] ([0] = 2)
+
+35              BP[ 0, 0, 2, 2, 2, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0 ]
+0               HP[ ]MAX
+26              end of program

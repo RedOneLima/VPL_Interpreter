@@ -1,0 +1,17 @@
+0               This tests all of the global operations
+
+32 2            Allocate space for 2 global var
+4 4             Allocate space for 4 local var
+
+22 0 2          put lit 2 in cell 0
+22 1 5          put lit 5 in cell 1
+
+33 0 0          put contents of local cell 0 into global cell 0
+33 1 1          put contents of local cell 1 into global cell 1
+
+34 2 0          put contents of global cell 0 into local cell 2
+34 3 1          put contents of global cell 1 into local cell 3
+
+35              BP[ 0, 0, 2, 5, 2, 5 ]SP
+0               HP[  ]MAX
+26              end of program

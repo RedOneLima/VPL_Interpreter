@@ -1,0 +1,30 @@
+0               This tests heap operations
+
+4 5             Make room for local var
+22 0 5          set local var 0 to 5
+22 1 2          set local var 1 to 2
+22 2 3          set local var 2 to 3
+22 3 9          set local var 3 to 9
+
+
+0               Test new
+31 4 10         create new heap space of size 10
+0               saves the start of the heap space
+0               in local var 4
+
+0               Test put
+25 4 0 3        put local cell [3] into heap cell [4]+[0]
+25 4 1 2        put local cell [2] into heap cell [4]+[1]
+25 4 2 1        put local cell [1] into heap cell [4]+[2]
+25 4 3 0        put local cell [0] into heap cell [4]+[3]
+
+0               Test get
+4 4             Make room for the 4 var we're about to get
+24 5 4 0        Take from heap cell [4]+[0] into local cell 5
+24 6 4 1        Take from heap cell [4]+[1] into local cell 6
+24 7 4 2        Take from heap cell [4]+[2] into local cell 7
+24 8 4 3        Take from heap cell [4]+[3] into local cell 8
+
+35              BP[ 0, 0, 5, 2, 3, 9, 9990, 9, 3, 2, 5 ]
+0               HP[ 0, 0, 3, 2, 0, 9, 0, 0, 0, 5 ]MAX
+26              end of program

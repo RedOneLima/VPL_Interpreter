@@ -1,0 +1,21 @@
+0               This tests the call, saving a literal into
+0               the subroutine and returning that litteral back to main
+
+
+4 2             Make room for literals in main
+22 0 50         put 50 into cell 0
+3 0             push contents of cell 0 (50) onto new stack
+2 1001          call subroutine at label 1001
+6 1             puts the return value (-50) into stack cell 1
+35              debug code to show stack and heap
+26              end program
+
+0               At this point, stack should be BP[ 0, 0, 50, -50 ]SP
+0               Heap should be empty
+
+1 1001          start of subroutine
+4 1             gives extra room in stack frame for local var
+21 1 0          Negate cell 0 and save it in 1 (-50)
+5 1             give the contents of cell 1 (-50) for return
+
+
