@@ -184,14 +184,16 @@ import java.util.*;
                         sp += push; //Move the sp to the end of the stack frame
                         push = 2; //reset push for next call
                         ip = a; //Move the ip to the first instruction of the new routine marked by the label
-                        continue;
+                        break;
 
 /*3*/               case passCode:
                         mem[sp + push++] = mem[bpOffset+a]; //this PUSHes the contents of a onto the upcoming stack frame
+                        ip+=2;
                         break;
 
 /*4*/               case allocCode:
                         sp += a; //increases sp by n (ip+1) for local variables
+                        ip+=2;
                         break;
 
 /*5*/               case returnCode:
@@ -199,44 +201,49 @@ import java.util.*;
                         ip = mem[bp+1]; //Moves ip to next instruction in the parent routine
                         sp = bp; //moves sp back to top of parent stack frame
                         bp = mem[bp]; //Moves bp back to base of parent stack frame
-                        continue;
+                        break;
+                        //continue;
 /*6*/
                     case getRetvalCode:
                         mem[bpOffset+a] = rv; //Puts returned value into ath cell in current stack frame
+                        ip+=2;
                         break;
 
 /*7*/               case jumpCode:
                         ip = a; //jump to location in ip+1
-                        continue;
+                        break;
+                        //continue;
 
 /*8*/               case condJumpCode:
-                        if (mem[bpOffset+b] == 0) {
-                            //if the contents of the given cell is 0 the branch condition fails and ip moves to the next sequential instruction
-                        } else {
-                            //otherwise if the contents are non-zero, then the branch is taken and ip moves to location in ip+1
+                        if (mem[bpOffset+b] != 0) {
                             ip = a;
-                            continue;
-                        }
+                        }else
+                            ip+=3;
                         break;
 
 /*9*/               case addCode:
                         mem[bpOffset+a] = mem[bpOffset+b] + mem[bpOffset+c]; //a = b + c
+                        ip+=4;
                         break;
 
 /*10*/              case subCode:
                         mem[bpOffset+a] = mem[bpOffset+b] - mem[bpOffset+c]; //a = b - c
+                        ip+=4;
                         break;
 
 /*11*/              case multCode:
                         mem[bpOffset+a] = mem[bpOffset+b] * mem[bpOffset+c]; //a = b * c
+                        ip+=4;
                         break;
 
 /*12*/              case divCode:
                         mem[bpOffset+a] = mem[bpOffset+b] / mem[bpOffset+c]; //a = b / c
+                        ip+=4;
                         break;
 
 /*13*/              case remCode:
                         mem[bpOffset+a] = mem[bpOffset+b] % mem[bpOffset+c]; //a = b % c
+                        ip+=4;
                         break;
 
 /*14*/              case equalCode:
@@ -245,6 +252,7 @@ import java.util.*;
                         } else { //if the difference isn't zero
                             mem[bpOffset + a] = 0; //not equal and the boolean value 0 (false) is saved in a
                         }
+                        ip+=4;
                         break;
 
 /*15*/              case notEqualCode:
@@ -253,14 +261,16 @@ import java.util.*;
                         } else { //if the difference is zero
                             mem[bpOffset + a] = 0; //b and c are equal and the boolean value 0 (false) is saved in cell a
                         }
+                        ip+=4;
                         break;
 
 /*16*/              case lessCode:
-                        if (mem[bpOffset + b] - mem[bpOffset + c] < 0) { //checks to see if b < c by b-c and checking for a negative
-                            mem[bpOffset + a] = 1;  //if below zero then b is less than c and the boolean value 1 (true) is saved in cell a
-                        } else { //if the difference isn't below zero
+                        if (mem[bpOffset + b] < mem[bpOffset + c]) { //checks to see if b < c
+                            mem[bpOffset + a] = 1;
+                        } else {
                             mem[bpOffset + a] = 0; //not less than and the boolean value 0 (false) is saved in cell a
                         }
+                        ip+=4;
                         break;
 
 /*17*/              case lessEqualCode:
@@ -269,6 +279,7 @@ import java.util.*;
                         } else { //if the difference isn't zero or less
                             mem[bpOffset + a] = 0; //not less than or equal and the boolean value 0 (false) is saved in cell a
                         }
+                        ip+=4;
                         break;
 
 /*18*/              case andCode:
@@ -277,6 +288,7 @@ import java.util.*;
                         } else { //if either b or c contains zero
                             mem[bpOffset + a] = 0; //the boolean value 0 (false) is saved in cell a
                         }
+                        ip+=4;
                         break;
 
 /*19*/              case orCode:
@@ -285,6 +297,7 @@ import java.util.*;
                         } else { //if both b and c contain zero
                             mem[bpOffset + a] = 0; //the boolean value 0 (false) is saved in cell a
                         }
+                        ip+=4;
                         break;
 
 /*20*/              case notCode:
@@ -293,27 +306,33 @@ import java.util.*;
                         } else {
                             mem[bpOffset + a] = 0; //put the opposite boolean value of cell b into cell a
                         }
+                        ip+=3;
                         break;
 
 /*21*/              case oppCode:
                         //sub the value in cell b by twice its value to get the opposite sign of the same abs value
                         mem[bpOffset + a] = mem[bpOffset + b] * -1;
+                        ip+=3;
                         break;
 
 /*22*/              case litCode:
                         mem[bpOffset + a] = b; //puts the literal in cell b into virtual stack position in cell a
+                        ip+=3;
                         break;
 
 /*23*/              case copyCode:
                         mem[bpOffset + a] = mem[bpOffset + b]; //copies the value from cell b into cell a
+                        ip+=3;
                         break;
 
 /*24*/               case getCode:
                         mem[bpOffset+a] = mem[mem[bpOffset+b] + mem[bpOffset+c]]; //gets from the heap from the base index pointed to by ip+2 and offset of ip+3
+                        ip+=4;
                         break;
 
 /*25*/              case putCode:
                         mem[mem[bpOffset+a] + mem[bpOffset+b]] = mem[bpOffset+c]; //puts the contents of ip+3 into the heap location whose base is ip+1 and offset is ip+2
+                        ip+=4;
                         break;
 
 /*26*/              case haltCode:
@@ -323,31 +342,40 @@ import java.util.*;
                         System.out.print("? ");//prompt for user input
                         int in = input.nextInt(); //takes user input
                         mem[bpOffset + a] = in; //puts user input into cell a
+                        ip+=2;
                         break;
 
 /*28*/              case outputCode:
                         System.out.print("> " + mem[bpOffset + a]); //displays the contents of cell a
+                        ip+=2;
                         break;
 
 /*29*/              case newlineCode:
                         System.out.println(); //move cursor to next line
+                        ip++;
                         break;
 
 /*30*/              case symbolCode:
                         if(mem[bpOffset+a]>=32 && mem[bpOffset+a]<=126)
                             System.out.print((char)mem[bpOffset+a]);
+                        ip+=2;
                         break;
 
 /*31*/              case newCode:
                         hp -= b; //decrease hp to make room on the heap designated by the 2nd arg
                         mem[bpOffset+a] = hp; //save the index of hp to signify the start of the obj
+                        ip+=3;
                         break;
 
 /*32*/              case allocGlobalCode:
-                        if(ip!=0) System.out.println("Global space must be allocated at the beginning of the program");
+                        if(ip!=0){
+                            System.out.println("Global space must be allocated at the beginning of the program");
+                            System.exit(1);
+                        }
                         numGlobal = a;
                         bp+=numGlobal; //Moves bp to make room for globals
-                        sp+=numGlobal; //Moves sp to keep the inital stack frame integraty
+                        sp+=numGlobal; //Moves sp to keep the initial stack frame
+                        ip+=2;
                         break;
 
 /*33*/              case toGlobalCode:
@@ -355,6 +383,7 @@ import java.util.*;
                             mem[gp + a] = mem[bpOffset+b]; //save the value in ip+2 into global whos offset is ip+1
                         else
                             System.out.print("Global does not exist. No action taken");
+                        ip+=3;
                         break;
 
 /*34*/              case fromGlobalCode:
@@ -362,17 +391,19 @@ import java.util.*;
                             mem[bpOffset+a] = mem[gp + b]; //save the value into ip+2 from global who's offset is ip+1
                         else
                             System.out.print("Global does not exist. No action taken");
+                        ip+=3;
                         break;
 
 /*35*/              case debugCode:
                         showStackFrame(); //used to print out the current stack frame for debugging
                         showHeap();//used to print out the current heap for debugging
+                        ip++;
                         break;
 
                     default:
                         System.out.println("Something went wrong!");
                 }
-                ip+=numArgs(opcode)+1;
+                //ip+=numArgs(opcode)+1;
             }
 
         }//run

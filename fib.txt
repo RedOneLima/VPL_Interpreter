@@ -1,0 +1,81 @@
+0                              import java.util.Scanner;
+
+0                              public class Demo2{
+0 main starts here            public static void main(String[] args){
+
+0                              Scanner keys = new Scanner( System.in );
+4 6   make local space
+0                             System.out.print("? ");
+27 0  local cell 0 is n       int n = keys.nextInt();
+
+22 4 40  allocate 40 spaces on heap
+31 5  4  cell 5 holds start of array     int[] a = new int[40];
+
+22 1 0  cell 1 = 0                    int zero = 0;
+22 2 1  cell 2 = 1                    int one = 1;
+
+25 5 1 2   a[zero] = one;
+25 5 2 2   a[one] = one;
+
+3 0   pass n over             int m = f( n, a );
+3 5   pass a over
+2 1001  call f
+6 3    m = func eval from rv
+
+28 3         System.out.println( m );
+29
+
+26
+
+0                                 }
+
+0    n=cell 0, a=cell 1
+1 1001  start of f               private static int f( int n, int[] a ){
+
+4 9    allocate r(2) s(3) k(4) t(5) zero(9) one(6) two(7) a[n](8)
+                         0                     int r, s, k, t;
+                         0                     int one, two;
+
+22 9 0  make literals 0, 1, 2
+22 6 1
+22 7 2
+
+24 8 1 0 temp=a[n]          if( a[n] > 0 ){
+17 10 8 9
+8 2001 10   if cell 10 ( a[n]<=0 ) is 1, jump to 2001
+
+23 5 8               t = a[n];
+
+7 3001    }
+0                             else{
+1 2001    start code for a[n]==0 meaning need to compute recursively
+
+0                             one = 1;
+0                             two = 2;
+10 4 0 7               k=n-two;
+
+3 4      r = f( k, a );
+3 1
+2 1001
+6 2
+
+9 4 4 6           k = k+one;  // k is now n-1
+
+3 4      s = f( k, a );
+3 1
+2 1001
+6 3
+
+9 5 2 3      t = r + s;
+
+25 1 0 5      a[n] = t;
+
+0                }
+
+1 3001  jump here if did "a[n]>0" work
+
+5 5    return t;
+
+0                   }
+
+0                  }
