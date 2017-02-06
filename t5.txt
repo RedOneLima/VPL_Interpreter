@@ -1,7 +1,7 @@
 4 4         Allocate 4 local spaces
 
 22 2 6       [2] = lit 6
-31 0 8      [0] = new hp; size 8
+31 0 2       [0] = new hp; size 6
 
 22 2 17     [2] = lit 17
 22 1 0      [1] = lit 0
@@ -12,7 +12,7 @@
 25 0 1 2    [[0] + [1]] = [2]
 
 22 2 4      [2] = lit 4
-31 3 8      [3] = new hp; size 8
+31 3 2      [3] = new hp; size 4
 
 22 2 6      [2] = lit 6
 22 1 0      [2] = lit 0
@@ -47,6 +47,6 @@
 28 2        print [2]
 29          newline
 
-35          BP[ 0, 0, ... ]SP
-0           HP[ ... ]MAX
+35          BP[ 0, 0, 9994, 4, 17, 9990 ]SP
+0           HP[ 6, 0, 0, 19, 17, 0, 0, 0, 0, 31 ]MAX
 26  halt -

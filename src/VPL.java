@@ -6,7 +6,7 @@ import java.util.*;
 
     public class VPL
     {
-        static final int max = 100000;
+        static final int max = 10000;
         static int[] mem = new int[max];
         static int ip, bp, sp, rv, hp, numPassed, gp, k;
         static String fileName;
@@ -362,7 +362,7 @@ import java.util.*;
                         break;
 
 /*31*/              case newCode:
-                        hp -= b; //decrease hp to make room on the heap designated by the 2nd arg
+                        hp -= mem[bpOffset+b]; //decrease hp to make room on the heap designated by the 2nd arg
                         mem[bpOffset+a] = hp; //save the index of hp to signify the start of the obj
                         ip+=3;
                         break;

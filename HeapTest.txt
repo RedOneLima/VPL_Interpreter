@@ -1,14 +1,14 @@
 0               This tests heap operations
 
-4 5             Make room for local var
+4 6             Make room for local var
 22 0 5          set local var 0 to 5
 22 1 2          set local var 1 to 2
 22 2 3          set local var 2 to 3
-22 3 9          set local var 3 to 9-
-
+22 3 9          set local var 3 to 9
+22 5 10
 
 0               Test new
-31 4 10         create new heap space of size 10
+31 4 5          create new heap space of size 9
 0               saves the start of the heap space
 0               in local var 4
 
@@ -25,6 +25,6 @@
 24 7 4 2        Take from heap cell [4]+[2] into local cell 7
 24 8 4 3        Take from heap cell [4]+[3] into local cell 8
 
-35              BP[ 0, 0, 5, 2, 3, 9, 9990, 9, 3, 2, 5 ]
+35              BP[ 0, 0, 5, 2, 3, 9, 9990, 9, 3, 2, 5, 0 ]
 0               HP[ 0, 0, 3, 2, 0, 9, 0, 0, 0, 5 ]MAX
 26              end of program
