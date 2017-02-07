@@ -1,0 +1,10 @@
+4 4         Allocate 4 spaces for local
+22 3 10     [3] = lit  10
+31 0 3      [0] = new array[10]
+22 1 9      [1] = lit 9
+22 2 123    [2] = lit 123
+25 0 1 2    [[0] + [1]] = [2]
+24 2 0 1    [2] = [[0] + [1]]
+28 2        Print [2]
+29          newline
+26          end of program

@@ -6,11 +6,14 @@ import java.util.*;
 
     public class VPL
     {
-        static final int max = 10000;
-        static int[] mem = new int[max];
-        static int ip, bp, sp, rv, hp, numPassed, gp, k;
-        static String fileName;
-/*##############################################################################################################*/
+       private static final int max = 10000;
+       private static int[] mem = new int[max];
+       private static int ip, bp, sp, rv, hp, gp, k;
+       private static String fileName;
+
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
+
         // use symbolic names for all opcodes:
         // op to produce comment on a line by itself
         private static final int noopCode = 0; // ops involved with registers
@@ -68,7 +71,10 @@ import java.util.*;
         // except ops that have a label return number of arguments
         // after the label, which always comes immediately after
         // the opcode
-/*##################################################################################################################*/
+
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
+
         public static void main(String[] args) throws Exception
         {
             BufferedReader keys = new BufferedReader(
@@ -152,7 +158,6 @@ import java.util.*;
 
             // initialize registers:
             bp = k;  sp = k+2;  ip = 0;  rv = -1;  hp = max;
-            numPassed = 0;
 
             int codeEnd = bp-1;
 
@@ -162,6 +167,9 @@ import java.util.*;
             gp = codeEnd + 1;
             run();
         }// main
+
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
 
         private static void run(){
             int bpOffset, a, b, c;
@@ -202,7 +210,7 @@ import java.util.*;
                         sp = bp; //moves sp back to top of parent stack frame
                         bp = mem[bp]; //Moves bp back to base of parent stack frame
                         break;
-                        //continue;
+
 /*6*/
                     case getRetvalCode:
                         mem[bpOffset+a] = rv; //Puts returned value into ath cell in current stack frame
@@ -403,10 +411,12 @@ import java.util.*;
                     default:
                         System.out.println("Something went wrong!");
                 }
-                //ip+=numArgs(opcode)+1;
             }
 
         }//run
+
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
 
         private static int numArgs( int opcode ) {
             // highlight specially behaving operations
@@ -456,12 +466,18 @@ import java.util.*;
 
         }// numArgs
 
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
+
         private static void showMem( int a, int b ) {
             for( int k=a; k<=b; ++k )
             {
                 System.out.println( k + ": " + mem[k] );
             }
         }// showMem
+
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
 
         private static void showStackFrame(){
             //For debugging purposes. Display everything from the bp to the sp//
@@ -477,6 +493,9 @@ import java.util.*;
             System.out.print(" ]SP\n");
         }//showStackFrame
 
+/*-------------------------------------------------------------------------------------------------------------
+**-----------------------------------------------------------------------------------------------------------*/
+
         private static void showHeap(){
             System.out.print("HP[ ");
             for(int i = hp;i<max;i++){
@@ -488,6 +507,6 @@ import java.util.*;
                 }
             }
             System.out.print(" ]MAX\n");
-        }
+        }//showHeap
 
     }// VPL
